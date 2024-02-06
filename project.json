@@ -1,0 +1,24 @@
+{
+  "name": "service-template",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/service-template/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "service-template:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "service-template:build:development"
+        },
+        "production": {
+          "buildTarget": "service-template:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
